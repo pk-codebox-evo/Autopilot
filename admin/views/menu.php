@@ -4,7 +4,8 @@
 
         <div class="uk-nestable-item uk-visible-hover" ng-class="menues['{{ $menu }}']['{{ $item['_id'] }}'].data.active ? '':'menu-item-inactive'">
 
-            <div class="uk-nestable-handle"></div>
+            <div class="uk-nestable-handle uk-margin-small-right"></div>
+            <div data-nestable-action="toggle"></div>
 
             <a class="uk-margin-small-left" ng-click="toggleActive('main', '{{ $item['_id'] }}')" ng-class="menues['{{ $menu }}']['{{ $item['_id'] }}'].data.active ? 'uk-icon-circle uk-text-success':'uk-icon-circle-o uk-text-danger'"></a>
 

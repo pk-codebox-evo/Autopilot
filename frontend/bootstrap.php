@@ -70,7 +70,7 @@ $frontend->service('widgets', function() use($cockpit) {
 });
 
 $frontend->service('memory', function() use($cockpit) {
-    $client = new RedisLite(sprintf("%s/autopilot.memory.sqlite", $cockpit->path('tmp:')));
+    $client = new SimpleStorage\Client(sprintf("redislite://%s/autopilot.memory.sqlite", $cockpit->path('tmp:')));
     return $client;
 });
 
